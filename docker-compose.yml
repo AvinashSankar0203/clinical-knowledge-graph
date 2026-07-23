@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: medgraph
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      PGHOST: db
+      PGPORT: 5432
+      PGDATABASE: medgraph
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+    depends_on:
+      db:
+        condition: service_healthy
