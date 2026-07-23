@@ -1,0 +1,74 @@
+[
+  {
+    "id": "p01",
+    "title": "Deep Learning-Based Detection of Referable Diabetic Retinopathy and Macular Edema Using Ultra-Widefield Fundus Imaging",
+    "url": "https://arxiv.org/pdf/2409.12854",
+    "summary": "Presents a deep learning pipeline for the MICCAI UWF4DR challenge that analyzes ultra-widefield fundus images to assess image quality and flag referable diabetic retinopathy and diabetic macular edema, aiming to catch peripheral retinal lesions that standard fundus photography can miss."
+  },
+  {
+    "id": "p02",
+    "title": "A systematic review on diabetic retinopathy detection and classification based on deep learning techniques using fundus images",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38699206/",
+    "summary": "Reviews deep learning methods for grading diabetic retinopathy from fundus photographs, covering how CNN-based models detect microaneurysms, hemorrhages, exudates, and other retinal features used for staging disease severity."
+  },
+  {
+    "id": "p03",
+    "title": "Analysis of Diabetic Retinopathy Based on Deep Learning",
+    "url": "https://www.mdpi.com/2078-2489/14/1/30",
+    "summary": "Applies AlexNet and ResNet101-based feature extraction to automatically detect and grade diabetic retinopathy severity from fundus images."
+  },
+  {
+    "id": "p04",
+    "title": "An advanced deep learning method to detect and classify diabetic retinopathy based on color fundus images",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37548671/",
+    "summary": "Uses a YOLOv3-based object detection model to identify and classify diabetic retinopathy lesions in color fundus photographs, aiming to improve diagnostic reliability."
+  },
+  {
+    "id": "p05",
+    "title": "A deep learning based model for diabetic retinopathy grading (RSG-Net)",
+    "url": "https://www.nature.com/articles/s41598-025-87171-9",
+    "summary": "Introduces RSG-Net, a deep neural network for grading diabetic retinopathy severity into multiple clinical stages from retinal fundus images, aiming to speed up screening."
+  },
+  {
+    "id": "p06",
+    "title": "Deep Learning for the Diagnosis of Esophageal Cancer in Endoscopic Images: A Systematic Review and Meta-Analysis",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9736434/",
+    "summary": "Systematic review of convolutional neural network models applied to endoscopic images for detecting and diagnosing esophageal cancer, evaluating their performance against endoscopist assessment."
+  },
+  {
+    "id": "p07",
+    "title": "Enhancing Diagnostic Precision in Thyroid Nodule Classification: A Deep Learning Approach to Automated Ultrasound Image Analysis",
+    "url": "https://www.medrxiv.org/content/10.1101/2025.02.05.25321737.full.pdf",
+    "summary": "Develops a CNN-based model trained on thyroid ultrasound images to automatically detect, segment, and classify thyroid nodules as benign or malignant, using histopathology-confirmed labels for validation."
+  },
+  {
+    "id": "p08",
+    "title": "Advancing Brain Tumor Diagnosis Using Deep Learning: A Systematic Review on Glioma Segmentation and Classification on Multiparametric MRI",
+    "url": "https://www.medrxiv.org/content/10.64898/2026.01.13.26344038v1.full",
+    "summary": "Reviews deep learning approaches for segmenting and classifying gliomas using multiparametric MRI sequences (T1, T2, T1ce, FLAIR), covering how different sequences aid tumor delineation and diagnosis."
+  },
+  {
+    "id": "p09",
+    "title": "Brain Tumor Multi Classification and Segmentation in MRI Images Using Deep Learning",
+    "url": "https://arxiv.org/pdf/2304.10039",
+    "summary": "Combines an EfficientNetB1 classifier with a U-Net segmentation model to classify brain MRI scans into meningioma, glioma, pituitary adenoma, or no-tumor categories, and to isolate tumor regions."
+  },
+  {
+    "id": "p10",
+    "title": "A Deep Learning Approach for Brain Tumor Classification and Segmentation Using a Multiscale Convolutional Neural Network",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7912940/",
+    "summary": "Proposes a multiscale CNN trained on T1-contrast-enhanced MRI to jointly segment and classify meningioma, glioma, and pituitary tumors across sagittal, coronal, and axial views."
+  },
+  {
+    "id": "p11",
+    "title": "Brain Tumor Segmentation from MRI Images using Deep Learning Techniques (cascaded CNN + Faster R-CNN)",
+    "url": "https://arxiv.org/pdf/2305.00257",
+    "summary": "Chains a CNN classifier, a Faster R-CNN localizer, and the Chan-Vese algorithm in sequence to detect, localize, and precisely segment meningiomas and gliomas in axial brain MRI scans."
+  },
+  {
+    "id": "p12",
+    "title": "Multi-class brain tumor MRI segmentation and classification using deep learning and machine learning approaches",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12613584/",
+    "summary": "Compares 2D-UNet and 3D-UNet segmentation alongside classical ML classifiers (KNN, SVM, gradient boosting) and CNNs like VGG16 for classifying brain tumors into six subtypes including glioma and schwannoma."
+  }
+]
