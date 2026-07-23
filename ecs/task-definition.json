@@ -1,0 +1,53 @@
+{
+  "family": "medgraph-api",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "executionRoleArn": "arn:aws:iam::344774635575:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "postgres",
+      "image": "postgres:16",
+      "essential": true,
+      "environment": [
+        { "name": "POSTGRES_DB", "value": "medgraph" },
+        { "name": "POSTGRES_USER", "value": "postgres" },
+        { "name": "POSTGRES_PASSWORD", "value": "postgres" }
+      ],
+      "portMappings": [{ "containerPort": 5432, "protocol": "tcp" }],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/medgraph-api",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "postgres",
+          "awslogs-create-group": "true"
+        }
+      }
+    },
+    {
+      "name": "medgraph-api",
+      "image": "344774635575.dkr.ecr.us-east-1.amazonaws.com/medgraph-api:latest",
+      "essential": true,
+      "dependsOn": [{ "containerName": "postgres", "condition": "START" }],
+      "portMappings": [{ "containerPort": 8000, "protocol": "tcp" }],
+      "environment": [
+        { "name": "PGHOST", "value": "localhost" },
+        { "name": "PGPORT", "value": "5432" },
+        { "name": "PGDATABASE", "value": "medgraph" },
+        { "name": "PGUSER", "value": "postgres" },
+        { "name": "PGPASSWORD", "value": "postgres" }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/medgraph-api",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "api",
+          "awslogs-create-group": "true"
+        }
+      }
+    }
+  ]
+}
